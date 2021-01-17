@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_height="wrap_content"
+    android:layout_margin="9dp"
+
+    android:layout_marginTop="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardElevation="2dp"
+    android:id="@+id/cardvw"
+    android:layout_marginBottom="6dp"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        android:padding="10dp"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.65"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:id="@+id/tokennumber"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:text="Token no"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:id="@+id/placedorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="8dp"
+                    android:text="Orders Placed"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/orderstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="8dp"
+                    android:text="Status"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="17sp" />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vertical_line" />
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="3dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.40"
+                android:id="@+id/billamount"
+
+                android:textAppearance="?attr/textAppearanceHeadline6"
+
+                android:padding="16dp"
+                android:text="BILL AMOUNT"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp" />
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="0.20"
+                android:padding="15dp"
+                android:text="Received"
+                android:visibility="invisible"
+                android:id="@+id/Received_order"
+                android:src="@drawable/ic_share_black_24dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+

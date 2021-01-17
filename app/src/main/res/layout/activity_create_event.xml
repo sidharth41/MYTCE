@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateEvent">
+    <ImageView
+        android:layout_margin="15dp"
+        android:layout_width="35dp"
+        android:id="@+id/backbutton"
+        android:src="@drawable/back"
+        android:layout_height="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Schedule Event"
+        android:layout_height="wrap_content"/>
+
+    <DatePicker
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+
+
+        android:id="@+id/datp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/datp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+
+        android:layout_width="280dp"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/colorPrimary"
+
+        app:hintTextColor="@color/colorPrimary"
+        app:counterTextColor="@color/colorPrimary"
+
+
+        android:layout_height="wrap_content"
+        android:id="@+id/eventnamelayout"
+
+        android:hint="Event Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Eventnameedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/eventnamelayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+
+        android:layout_width="280dp"
+        android:layout_gravity="center_horizontal"
+        app:boxStrokeColor="@color/colorPrimary"
+
+        app:hintTextColor="@color/colorPrimary"
+        app:counterTextColor="@color/colorPrimary"
+
+
+        android:layout_height="wrap_content"
+
+        android:hint="Event Details">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Eventdetailsedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/createvent"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/colorPrimary"
+
+        android:text="Create"
+        android:textColor="@android:color/white"
+        android:theme="@style/Theme.MaterialComponents" />
+
+
+</RelativeLayout>

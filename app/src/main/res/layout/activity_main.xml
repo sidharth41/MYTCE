@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="60dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:backgroundTint="@android:color/white"
+            app:title="Registration"
+
+            app:titleTextColor="@color/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/llforlogin"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="420dp">
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="280dp"
+            android:layout_gravity="center_horizontal"
+            app:boxStrokeColor="@color/colorPrimary"
+
+            app:hintTextColor="@color/colorPrimary"
+            app:counterTextColor="@color/colorPrimary"
+
+
+            android:layout_height="wrap_content"
+
+            android:hint="Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="280dp"
+            android:layout_gravity="center_horizontal"
+            app:boxStrokeColor="@color/colorPrimary"
+
+            app:hintTextColor="@color/colorPrimary"
+            app:counterTextColor="@color/colorPrimary"
+
+
+            android:layout_height="wrap_content"
+
+            android:hint="E-Mail ID">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="textEmailAddress"
+                android:id="@+id/email"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="280dp"
+            android:layout_gravity="center_horizontal"
+            app:boxStrokeColor="@color/colorPrimary"
+
+            app:hintTextColor="@color/colorPrimary"
+            app:counterTextColor="@color/colorPrimary"
+
+
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+
+            android:hint="Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="280dp"
+            android:id="@+id/Departtment"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:hint="Department">
+
+            <AutoCompleteTextView
+
+                android:id="@+id/department1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="280dp"
+            android:id="@+id/year"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:hint="Year">
+
+            <AutoCompleteTextView
+
+                android:layout_width="match_parent"
+                android:id="@+id/year1"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/register"
+            android:backgroundTint="@color/colorPrimary"
+            android:theme="@style/Theme.MaterialComponents"
+            android:layout_width="280dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+
+            android:layout_height="60dp"
+            android:text="Register"
+            />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBardetailspage"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

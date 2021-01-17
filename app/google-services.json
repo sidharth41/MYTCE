@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "728789516659",
+    "firebase_url": "https://mytceapp-4f605-default-rtdb.firebaseio.com",
+    "project_id": "mytceapp-4f605",
+    "storage_bucket": "mytceapp-4f605.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728789516659:android:c9174cd85d19e249e60506",
+        "android_client_info": {
+          "package_name": "com.tce.mytceapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728789516659-9ji6tch0jd2gi50i73om4levc64pqqq3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tce.mytceapplication",
+            "certificate_hash": "374a0012a9a6325579fd3773ffd088a4c081bb60"
+          }
+        },
+        {
+          "client_id": "728789516659-vempthe1l044epr9bf6m299684qvihso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3TiV3Ns_x-KjM9wYpkyW7xlOC5gLav-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728789516659-vempthe1l044epr9bf6m299684qvihso.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
