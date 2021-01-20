@@ -38,6 +38,7 @@ import java.util.TimeZone;
 
 public class EventFragment extends Fragment {
     View eview;
+    String year1,month1,date1;
     DatabaseReference databaseReference;
     FloatingActionButton addevent;
     private  RecyclerView meRecyclerView;
@@ -111,7 +112,7 @@ public class EventFragment extends Fragment {
         FirebaseRecyclerAdapter<modelforevent,Notificationsfragmentvh> adapter=new FirebaseRecyclerAdapter<modelforevent, Notificationsfragmentvh>(options) {
             @Override
             protected void onBindViewHolder(@NonNull Notificationsfragmentvh notificationsfragmentvh, int i, @NonNull modelforevent modelfornoti1) {
-                notificationsfragmentvh.setDetails(getContext(),modelfornoti1.getEventname(),modelfornoti1.getEventdate(),modelfornoti1.getEventdetails());
+                notificationsfragmentvh.setDetails(getContext(),modelfornoti1.getEventname(),modelfornoti1.getEventdate(),modelfornoti1.getEventdetails(),modelfornoti1.getEventTime(),modelfornoti1.getEventDepartment(),modelfornoti1.getDate(),modelfornoti1.getMonth(),modelfornoti1.getYear(),modelfornoti1.getROOT());
 
 
 
@@ -140,7 +141,7 @@ public class EventFragment extends Fragment {
 
     }
     public  class Notificationsfragmentvh extends RecyclerView.ViewHolder{
-        TextView nameview,detailsview,dateview,calopen;
+        TextView nameview,detailsview,dateview,calopen,tmvw,dpmtvw;
         ImageView shareev;
 
 
@@ -158,6 +159,8 @@ public class EventFragment extends Fragment {
             nameview=itemView.findViewById(R.id.nameevent);
             dateview=itemView.findViewById(R.id.eventtime);
             detailsview=itemView.findViewById(R.id.eventdetails);
+            tmvw=itemView.findViewById(R.id.timeev);
+            dpmtvw=itemView.findViewById(R.id.deptevent);
             calopen=itemView.findViewById(R.id.calendaropen);
             shareev=itemView.findViewById(R.id.shareev);
 
@@ -167,10 +170,43 @@ public class EventFragment extends Fragment {
 
         }
         @SuppressLint("ResourceAsColor")
-        public void setDetails(final Context ctx, final String name, final String date, final String details)  {
+        public void setDetails(final Context ctx, final String name, final String date, final String details,final String time,final String dept,final String date2,final String month2,final String year2,final String root)  {
+
+            int yr= Calendar.getInstance().get(Calendar.YEAR);
+            int mnt= Calendar.getInstance().get(Calendar.MONTH)+1;
+            int dt= Calendar.getInstance().get(Calendar.DATE);
+            Toast.makeText(ctx, " "+yr+" "+mnt+" "+dt, Toast.LENGTH_SHORT).show();
+            int dt1=Integer.parseInt(date2);
+            int mnt1=Integer.parseInt(month2)+1;
+            int yr1=Integer.parseInt(year2);
+            DatabaseReference deleteevent=FirebaseDatabase.getInstance().getReference("Event");
+
+            if(yr>yr1){
+                deleteevent.child(root).removeValue();
+            }
+            else if(yr==yr1) {
+
+                if(mnt>mnt1){
+                    deleteevent.child(root).removeValue();
+
+                }
+                else if(mnt==mnt1){
+                    if(dt>dt1){
+                        deleteevent.child(root).removeValue();
+                    }
+                }
+            }
+
+
+
+
+
+
             nameview.setText(name);
             dateview.setText(date);
             detailsview.setText(details);
+            tmvw.setText(time);
+            dpmtvw.setText(dept);
 
 
 
@@ -201,7 +237,7 @@ public class EventFragment extends Fragment {
                     Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
                     whatsappIntent.setType("text/plain");
 
-                    whatsappIntent.putExtra(Intent.EXTRA_TEXT,name+"\n"+"On "+date+" "+"\n"+details );
+                    whatsappIntent.putExtra(Intent.EXTRA_TEXT,name+"\n"+"On "+date+" "+"\n"+details+" Time: "+time+" Department: "+dept);
                     startActivity(Intent.createChooser(whatsappIntent, "Share using"));
 
                 }

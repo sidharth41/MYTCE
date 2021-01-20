@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateEvent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <ImageView
         android:layout_margin="15dp"
         android:layout_width="35dp"
@@ -31,7 +37,25 @@
 
         android:id="@+id/datp"/>
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="280dp"
         android:layout_below="@+id/datp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/eventtimelayout"
+        android:layout_height="wrap_content"
+        android:hint="Time">
+
+        <AutoCompleteTextView
+
+            android:id="@+id/Timeevent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/eventtimelayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
 
@@ -68,6 +92,7 @@
 
 
         android:layout_height="wrap_content"
+        android:id="@+id/eventdc"
 
         android:hint="Event Details">
 
@@ -84,7 +109,7 @@
         android:layout_height="70dp"
         android:textSize="18sp"
         android:layout_margin="12dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/eventdc"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="4dp"
         android:backgroundTint="@color/colorPrimary"
@@ -94,4 +119,5 @@
         android:theme="@style/Theme.MaterialComponents" />
 
 
+</RelativeLayout></ScrollView>
 </RelativeLayout>

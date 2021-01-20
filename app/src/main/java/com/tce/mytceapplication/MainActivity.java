@@ -78,11 +78,11 @@ public class MainActivity extends AppCompatActivity {
                 final String mYearm =Year.getText().toString();
                 final String role;
 
-                if(mEmail.endsWith("student.tce.edu")){
+                if(mEmail.endsWith("@student.tce.edu")){
                     role="Student";
 
                 }
-                else if(mEmail.endsWith("tce.edu")){
+                else if(mEmail.endsWith("@tce.edu")){
                     role="Faculty";
                 }
                 else{

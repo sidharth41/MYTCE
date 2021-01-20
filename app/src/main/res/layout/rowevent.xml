@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <com.google.android.material.card.MaterialCardView
-    android:layout_height="240dp"
+    android:layout_height="wrap_content"
     android:layout_margin="9dp"
 
     android:layout_marginTop="4dp"
@@ -27,7 +27,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_height="150dp">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -35,9 +35,13 @@
                 android:orientation="vertical"
                 android:layout_height="match_parent">
 
-
-                <TextView
-                    android:layout_width="match_parent"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+>             <TextView
+                    android:layout_width="0dp"
+    android:layout_weight="1.5"
                     android:textSize="20sp"
                     android:padding="8dp"
                     android:textStyle="bold"
@@ -45,7 +49,17 @@
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:text="Loading..."
                     android:layout_height="50dp"/>
-
+    >             <TextView
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:id="@+id/deptevent"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:text="Loading"
+        android:layout_height="50dp"/>
+</LinearLayout>
                 <TextView
                     android:id="@+id/eventtime"
                     android:layout_width="match_parent"
@@ -59,6 +73,17 @@
                     android:textSize="17sp" />
                 <TextView
                     android:id="@+id/eventdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="8dp"
+                    android:text="Loading..."
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/timeev"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
 
